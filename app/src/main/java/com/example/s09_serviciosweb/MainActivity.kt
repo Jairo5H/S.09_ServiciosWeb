@@ -19,7 +19,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import java.io.IOException
 
-// Modelo de datos para Retrofit
 data class Todo(
     val userId: Int,
     val id: Int,
@@ -27,7 +26,7 @@ data class Todo(
     val completed: Boolean
 )
 
-// Interfaz Retrofit
+
 interface ApiService {
     @GET("todos/{id}")
     fun getTodo(@Path("id") id: Int): Call<Todo>
